@@ -1,14 +1,8 @@
 [phases.setup]
 nixPkgs = [
-  "php82",
-  "php82Packages.bcmath",
-  "php82Packages.mbstring",
-  "php82Packages.pdo",
-  "pkgs.php82Packages.composer"
+  "php.withExtensions (exts: [exts.bcmath exts.mbstring exts.pdo exts.tokenizer])",
+  "composer"
 ]
-
-[variables]
-PHP_VERSION = "8.2"
 
 [phases.build]
 cmds = [
