@@ -1,5 +1,11 @@
 [phases.setup]
-nixPkgs = ["php82", "composer", "php82Packages.bcmath", "php82Packages.pdo", "php82Packages.mbstring"]
+nixPkgs = [
+  "php82",
+  "php82Packages.bcmath",
+  "php82Packages.mbstring",
+  "php82Packages.pdo",
+  "pkgs.php82Packages.composer"
+]
 
 [variables]
 PHP_VERSION = "8.2"
